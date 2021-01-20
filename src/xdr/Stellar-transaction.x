@@ -700,8 +700,7 @@ struct SimplePaymentResult
     int64 amount;
 };
 
-union PathPaymentStrictReceiveResult switch (
-    PathPaymentStrictReceiveResultCode code)
+union PathPaymentStrictReceiveResult switch (PathPaymentStrictReceiveResultCode code)
 {
 case PATH_PAYMENT_STRICT_RECEIVE_SUCCESS:
     struct
@@ -1028,8 +1027,7 @@ enum CreateClaimableBalanceResultCode
     CREATE_CLAIMABLE_BALANCE_UNDERFUNDED = -5
 };
 
-union CreateClaimableBalanceResult switch (
-    CreateClaimableBalanceResultCode code)
+union CreateClaimableBalanceResult switch (CreateClaimableBalanceResultCode code)
 {
 case CREATE_CLAIMABLE_BALANCE_SUCCESS:
     ClaimableBalanceID balanceID;
